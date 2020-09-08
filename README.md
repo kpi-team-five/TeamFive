@@ -2,7 +2,7 @@
 
 ## Technology Stack:
 - Language: JavaScript
-- Database: 
+- Database: SQLite
 
 ## Members:
 - [Nikita Lazarenko](https://github.com/UniversalCorn)
