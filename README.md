@@ -1,4 +1,5 @@
 # TeamFive
+Our project is about a database of contacts of teachers and students with the ability to communicate between them
 
 ## Technology Stack:
 - Language: JavaScript
