@@ -3,8 +3,9 @@
 ## Лист змін
 |Дата|Версія|Опис|Автор|
 |---|---|---|---|
-|23.09.2020|0.1.0|Створення анкети проекту|[Sumskiy Pavlo](https://github.com/paulsumskoy)|
-|14.12.2020|0.2.0|Редагування анкети проекту|[Sumskiy Pavlo](https://github.com/paulsumskoy)|
+|23.09.2020|0.1.0|Створення анкети проєкту|[Sumskiy Pavlo](https://github.com/paulsumskoy)|
+|14.12.2020|0.2.0|Редагування анкети проєкту|[Sumskiy Pavlo](https://github.com/paulsumskoy)|
+|15.12.2020|0.3.0|Редагування анкети проєкту|[Lazarenko Nikita](https://github.com/UniversalCorn)|
 
 ## Зміст
 - [1\. Вступ](#1-вступ)
