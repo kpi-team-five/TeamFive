@@ -1,0 +1,25 @@
+{
+  "name": "bdteam5",
+  "version": "1.0.0",
+  "description": "small grocery store with database",
+  "main": "index.js",
+  "scripts": {
+    "test": "testserver"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kpi-team-five/TeamFive.git"
+  },
+  "keywords": [
+    "db",
+    "database",
+    "grocery",
+    "online-shop"
+  ],
+  "author": "TeamFive",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kpi-team-five/TeamFive/issues"
+  },
+  "homepage": "https://github.com/kpi-team-five/TeamFive#readme"
+}
