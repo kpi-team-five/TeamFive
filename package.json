@@ -4,7 +4,8 @@
   "description": "small grocery store with database",
   "main": "index.js",
   "scripts": {
-    "test": "testserver"
+    "test": "testserver",
+    "start": "index.js"
   },
   "repository": {
     "type": "git",
