@@ -16,10 +16,12 @@
         <li><a href="/vegs">Овочі</a></li>
         <li><a href="/nuts">Горіхи</a></li>
         <li><a href="/sweet">Солодощі</a></li>
+        <li><a href="login">Авторизація</a></li>
+        <li><a href="/cart">Корзина</a></li>
       </ul>
     </nav>
     <main>
-      <div class="item">              
+      <div class="item">
         <img class="item-img" src="./img/fruits/banana.png">
         <p class="item-desc">Банан</p>
       </div>
@@ -117,6 +119,24 @@
       <div class="item">
         <img class="item-img" src="./img/sweet/jam.png">
         <p class="item-desc">Варення</p>
+      </div>
+      <div class="outer" style="display: flex; flex-direction: column; justify-content: space-between; position: fixed; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 80%; height: 80%; background-color: rgba(255, 255, 255, 0.5); border: 10px solid black">
+        <div class="top-block" style="display:flex; background-color: rgba(0, 255, 255, 0.5); height: 20%;">
+          <div class="vhod" style="width: 50%; height: 100%; border: 5px solid red;">Вход</div>
+          <div class="reg" style="width: 50%; height: 100%; border: 5px solid red;">Регистрация</div>
+        </div>
+
+        <form class="bottom-block-vhod" style="display:flex; flex-direction: column; justify-content: space-around; height: 80%;">
+          <input type="name" placeholder="login">
+          <input type="password" placeholder="password">
+          <button class="submit-button"></button>
+        </form>
+
+        <form class="bottom-block-reg" style="display: none; flex-direction: column; justify-content: space-around;">
+          <input type="name" placeholder="login">
+          <input type="password" placeholder="password">
+          <button class="submit-button"></button>
+        </form>
       </div>
     </main>
     <footer>
