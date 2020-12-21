@@ -7,6 +7,6 @@ const port = process.env.PORT || 80;
 
 app.use(express.static(static_root));
 
-app.listen(this.port, () => {
+app.listen(port, () => {
   console.log('Http server started');
 });
