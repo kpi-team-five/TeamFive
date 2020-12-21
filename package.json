@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/kpi-team-five/TeamFive#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "sqlite": "^4.0.18"
   }
 }
