@@ -16,8 +16,8 @@
         <li><a href="/vegs">Овочі</a></li>
         <li><a href="/nuts">Горіхи</a></li>
         <li><a href="/sweet">Солодощі</a></li>
-        <li><a href="login">Авторизація</a></li>
-        <li><a href="/cart">Корзина</a></li>
+        <li>Авторизація</li>
+        <li>Кошик</li>
       </ul>
     </nav>
     <main>
@@ -120,29 +120,32 @@
         <img class="item-img" src="./img/sweet/jam.png">
         <p class="item-desc">Варення</p>
       </div>
-      <div class="outer" style="display: flex; flex-direction: column; justify-content: space-between; position: fixed; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 80%; height: 80%; background-color: rgba(255, 255, 255, 0.5); border: 10px solid black">
-        <div class="top-block" style="display:flex; background-color: rgba(0, 255, 255, 0.5); height: 20%;">
-          <div class="vhod" style="width: 50%; height: 100%; border: 5px solid red;">Вход</div>
-          <div class="reg" style="width: 50%; height: 100%; border: 5px solid red;">Регистрация</div>
+      <div class="outer" style="display: none">
+        <div class="top-block">
+          <div class="vhod tab active-tab"><span>Вхід</span></div>
+          <div class="reg tab"><span>Реєстрація</span></div>
         </div>
 
-        <form class="bottom-block-vhod" style="display:flex; flex-direction: column; justify-content: space-around; height: 80%;">
+        <form class="bottom-block" id="vhod-form">
           <input type="name" placeholder="login">
           <input type="password" placeholder="password">
-          <button class="submit-button"></button>
+          <button class="submit-button" id="vhod-button">Увійти</button>
         </form>
 
-        <form class="bottom-block-reg" style="display: none; flex-direction: column; justify-content: space-around;">
+        <form class="bottom-block" id="reg-form" style="display: none;">
           <input type="name" placeholder="login">
           <input type="password" placeholder="password">
-          <button class="submit-button"></button>
+          <button class="submit-button" id="reg-button">Зареєструватися</button>
         </form>
+
+        <div class="close-button"><span>✖</span></div>
       </div>
     </main>
     <footer>
       <img src="./img/logo.png">
       <p>BD TeamFive Copyright 2020</p>
     </footer>
+    <div class="block-background" style="display: none"></div>
     <script type="text/javascript" src="./js/main.js"></script>
   </body>
 </html>
