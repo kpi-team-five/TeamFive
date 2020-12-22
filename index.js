@@ -14,22 +14,33 @@ app.listen(port, () => {
 });
 
 //подключаем модуль sqlite3
-var sqlite3 = require('sqlite3').verbose();
+const sqlite3 = require('sqlite3').verbose();
 
 //создаем базу данных
-var db = new sqlite3.Database('users.db');
 
-db.serialize(function() {
-  //создаем таблицу
-  db.run("CREATE TABLE IF NOT EXISTS users (id INTEGER PRIMARY KEY, login TEXT, password INTEGER)")
+let db = new sqlite3.Database('/database/users.db', sqlite3.OPEN_READWRITE, (err) => {
+  if (err) {
+    console.error(err.message);
+  }
+  console.log('Connected to the users database.');
+});
 
-  var stmt = db.prepare("INSERT INTO users (login, password) VALUES ('example@gmail.com', '1234567890')");
-  stmt.finalize();
+db.serialize(() => {
+  db.run("CREATE TABLE IF NOT EXISTS users (id INTEGER PRIMARY KEY, login TEXT, password INTEGER)");
 
-  db.each("SELECT rowid AS id, info FROM users", function (err, row) {
-    console.log(row.id + ": " + row.info);
+  db.each(`SELECT PlaylistId as id,
+                  Name as name
+           FROM playlists`, (err, row) => {
+    if (err) {
+      console.error(err.message);
+    }
+    // console.log(row.login + "\t" + row.password);
   });
 });
 
-//закрывае подключение к БД
-db.close();
+db.close((err) => {
+  if (err) {
+    console.error(err.message);
+  }
+  console.log('Close the database connection.');
+});
