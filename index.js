@@ -18,7 +18,7 @@ const sqlite3 = require('sqlite3').verbose();
 
 //создаем базу данных
 
-let db = new sqlite3.Database('/database/users.db', sqlite3.OPEN_READWRITE, (err) => {
+let db = new sqlite3.Database('/database/database.db', sqlite3.OPEN_READWRITE, (err) => {
   if (err) {
     console.error(err.message);
   }
