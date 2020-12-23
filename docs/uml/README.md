@@ -1,1 +1,1 @@
-![UC](https://github.com/wwwLaboratory/filmhub/blob/master/doc/umlDiagrams/usecase.png)
+![UC](https://github.com/kpi-team-five/TeamFive/blob/master/docs/uml/precedents.png)
