@@ -2,17 +2,16 @@ DROP TABLE IF EXISTS users;
 CREATE TABLE users (
     user_id TEXT PRIMARY KEY,
     login TEXT,
-    password TEXT,
-    chosen_product SET
+    password TEXT
 );
 
 DROP TABLE IF EXISTS products;
 CREATE TABLE products (
-    product_id TEXT PRIMARY KEY,
-    product_name TEXT,
-    product_img_src TEXT,
-    product_price TEXT,
-    product_category TEXT
+    id TEXT PRIMARY KEY,
+    name TEXT,
+    img_src TEXT,
+    price TEXT,
+    category_id TEXT
 );
 
 INSERT INTO products(product_id, product_name, product_img_src, product_price, product_category)
