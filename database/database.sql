@@ -148,3 +148,28 @@ INSERT INTO students(product_name)
 
 INSERT INTO students(product_name)
     Values('Цасюк Ілля');
+
+DROP TABLE IF EXISTS category;
+CREATE TABLE category (
+    category_id TEXT PRIMARY KEY
+    categody_name TEXT
+)
+
+INSERT INTO category(category_id, category_name)
+    Values('c1', 'fruits');
+
+INSERT INTO category(category_id, category_name)
+    Values('c2', 'vegs');
+
+INSERT INTO category(category_id, category_name)
+    Values('c3', 'nuts');
+
+INSERT INTO category(category_id, category_name)
+    Values('c4', 'sweet');
+
+DROP TABLE IF EXISTS cart;
+CREATE TABLE cart (
+    user_id TEXT PRIMARY KEY
+    product_id TEXT
+)
+
