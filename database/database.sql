@@ -151,9 +151,9 @@ INSERT INTO students(product_name)
 
 DROP TABLE IF EXISTS category;
 CREATE TABLE category (
-    category_id TEXT PRIMARY KEY
+    category_id TEXT PRIMARY KEY,
     categody_name TEXT
-)
+);
 
 INSERT INTO category(category_id, category_name)
     Values('c1', 'fruits');
@@ -169,7 +169,7 @@ INSERT INTO category(category_id, category_name)
 
 DROP TABLE IF EXISTS cart;
 CREATE TABLE cart (
-    user_id TEXT PRIMARY KEY
+    user_id TEXT PRIMARY KEY,
     product_id TEXT
-)
+);
 
