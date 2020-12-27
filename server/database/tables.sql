@@ -1,12 +1,10 @@
-DROP TABLE IF EXISTS users;
-CREATE TABLE users (
+CREATE TABLE IF NOT EXISTS users (
     id INTEGER PRIMARY KEY,
     login TEXT,
     pass TEXT
 );
 
-DROP TABLE IF EXISTS products;
-CREATE TABLE products (
+CREATE TABLE IF NOT EXISTS products (
     id INTEGER PRIMARY KEY,
     name TEXT,
     img_src TEXT,
@@ -15,20 +13,17 @@ CREATE TABLE products (
     FOREIGN KEY(category_id) REFERENCES category(id)
 );
 
-DROP TABLE IF EXISTS students;
-CREATE TABLE students (
+CREATE TABLE IF NOT EXISTS students (
     id INTEGER PRIMARY KEY,
     student_name TEXT
 );
 
-DROP TABLE IF EXISTS category;
-CREATE TABLE category (
+CREATE TABLE IF NOT EXISTS category (
     id INTEGER PRIMARY KEY,
     name TEXT
 );
 
-DROP TABLE IF EXISTS cart;
-CREATE TABLE cart (
+CREATE TABLE IF NOT EXISTS cart (
     id INTEGER PRIMARY KEY,
     user_id TEXT,
     product_id TEXT,
