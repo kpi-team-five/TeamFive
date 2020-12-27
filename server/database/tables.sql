@@ -15,7 +15,7 @@ CREATE TABLE IF NOT EXISTS products (
 
 CREATE TABLE IF NOT EXISTS students (
     id INTEGER PRIMARY KEY,
-    student_name TEXT
+    name TEXT
 );
 
 CREATE TABLE IF NOT EXISTS category (

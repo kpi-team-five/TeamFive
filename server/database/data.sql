@@ -64,73 +64,73 @@ INSERT INTO products(id, name, img_src, price, category_id)
 INSERT INTO products(id, name, img_src, price, category_id)
     Values(20, 'Варення бабусине звичайне', './app/img/sweet/jam.png', '100 грн', 4);
 
-INSERT INTO students(id, student_name)
+INSERT INTO students(id, name)
     Values(1, 'Бартосевич Володимир');
 
-INSERT INTO students(id, student_name)
+INSERT INTO students(id, name)
     Values(2, 'Беспалий Ілля');
 
-INSERT INTO students(id, student_name)
+INSERT INTO students(id, name)
     Values(3, 'Бокій Артем');
 
-INSERT INTO students(id, student_name)
+INSERT INTO students(id, name)
     Values(4, 'Боднік Кирило');
 
-INSERT INTO students(id, student_name)
+INSERT INTO students(id, name)
     Values(5, 'Бублик Єгор');
 
-INSERT INTO students(id, student_name)
+INSERT INTO students(id, name)
     Values(6, 'Вахтіна Єва');
 
-INSERT INTO students(id, student_name)
+INSERT INTO students(id, name)
     Values(7, 'Голік Владислав');
 
-INSERT INTO students(id, student_name)
+INSERT INTO students(id, name)
     Values(8, 'Головенко Олександр');
 
-INSERT INTO students(id, student_name)
+INSERT INTO students(id, name)
     Values(9, 'Долгова Єлизовета');
 
-INSERT INTO students(id, student_name)
+INSERT INTO students(id, name)
     Values(10, 'Іванченко Георгій');
 
-INSERT INTO students(id, student_name)
+INSERT INTO students(id, name)
     Values(11, 'Королюк Ярослав');
 
-INSERT INTO students(id, student_name)
+INSERT INTO students(id, name)
     Values(12, 'Лазоренко Нікіта');
 
-INSERT INTO students(id, student_name)
+INSERT INTO students(id, name)
     Values(13, 'Литвишко Нікіта');
 
-INSERT INTO students(id, student_name)
+INSERT INTO students(id, name)
     Values(14, 'Макарицький Олег');
 
-INSERT INTO students(id, student_name)
+INSERT INTO students(id, name)
     Values(15, 'Матюха Кирило');
 
-INSERT INTO students(id, student_name)
+INSERT INTO students(id, name)
     Values(16, 'Перевалов Максим');
 
-INSERT INTO students(id, student_name)
+INSERT INTO students(id, name)
     Values(17, 'Пєнський Володимир');
 
-INSERT INTO students(id, student_name)
+INSERT INTO students(id, name)
     Values(18, 'Рекечинський Дмитр');
 
-INSERT INTO students(id, student_name)
+INSERT INTO students(id, name)
     Values(19, 'Рудник Микола');
 
-INSERT INTO students(id, student_name)
+INSERT INTO students(id, name)
     Values(20, 'Сумський Павло');
 
-INSERT INTO students(id, student_name)
+INSERT INTO students(id, name)
     Values(21, 'Ткаченко Юлія');
 
-INSERT INTO students(id, student_name)
+INSERT INTO students(id, name)
     Values(22, 'Третяк Владислав');
 
-INSERT INTO students(id, student_name)
+INSERT INTO students(id, name)
     Values(23, 'Цасюк Ілля');
 
 INSERT INTO category(id, name)
