@@ -1,6 +1,14 @@
 const items = document.getElementsByClassName('item');
 const paras = document.getElementsByTagName('p');
 
+const HOST = 'http://localhost:80';
+
+const getProducts = async () => {
+  const result = await fetch(`${HOST}/products`);
+  const json = await result.json();
+  console.log(json);
+}
+
 const setHeight = () => {
   for (let item of items) {
     item.style.height = item.offsetWidth + 'px';
