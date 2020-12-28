@@ -1,9 +1,24 @@
 'use strict';
 
 const { promisify } = require('util');
-const database = require('./database').getConnection();
+let database;
 
 const UserQueries = {};
+const ProductQueries = {};
+const StudentQueries = {};
+const CategoryQueries = {};
+const CartQueries = {};
+
+const init = () => {
+  database = require('./database').getConnection();
+  return {
+    UserQueries,
+    ProductQueries,
+    StudentQueries,
+    CategoryQueries,
+    CartQueries,
+  };
+};
 
 UserQueries.add = async (user) => {
   return await promisify(database.run.bind(database))
@@ -11,6 +26,7 @@ UserQueries.add = async (user) => {
 };
 
 UserQueries.getOne = async (id) => {
+  console.log(database);
   return await promisify(database.get.bind(database))
     (`SELECT * FROM users WHERE id=${id}`);
 };
@@ -30,8 +46,6 @@ UserQueries.delete = async (id) => {
     (`DELETE FROM users WHERE id=${id}`);
 };
 
-const ProductQueries = {};
-
 ProductQueries.add = async (product) => {
   return await promisify(database.run.bind(database))
     (`INSERT INTO products(name, img_src, price, category_id) Values('${product.name}', '${product.img}', '${product.price}', ${product.category})`);
@@ -39,12 +53,12 @@ ProductQueries.add = async (product) => {
 
 ProductQueries.getOne = async (id) => {
   return await promisify(database.get.bind(database))
-    (`SELECT * FROM products WHERE id=${id}`);
+    (`SELECT products.id, products.name, products.img_src, products.price, category.name AS category FROM products INNER JOIN category ON products.category_id=category.id WHERE products.id=${id}`);
 };
 
 ProductQueries.getAll = async () => {
   return await promisify(database.all.bind(database)) 
-    ('SELECT * FROM products');
+    ('SELECT products.id, products.name, products.img_src, products.price, category.name AS category FROM products INNER JOIN category ON products.category_id=category.id');
 };
 
 ProductQueries.update = async (id, product) => {
@@ -56,8 +70,6 @@ ProductQueries.delete = async (id) => {
   return await promisify(database.run.bind(database))
     (`DELETE FROM products WHERE id=${id}`);
 };
-
-const StudentQueries = {};
 
 StudentQueries.add = async (student) => {
   return await promisify(database.run.bind(database))
@@ -84,8 +96,6 @@ StudentQueries.delete = async (id) => {
     (`DELETE FROM students WHERE id=${id}`);
 };
 
-const CategoryQueries = {};
-
 CategoryQueries.add = async (category) => {
   return await promisify(database.run.bind(database))
    (`INSERT INTO category(name) Values('${category.name}')`);
@@ -111,11 +121,9 @@ CategoryQueries.delete = async (id) => {
     (`DELETE FROM category WHERE id=${id}`);
 };
 
-const CartQueries = {};
-
 CartQueries.add = async (cart) => {
   return await promisify(database.run.bind(database))
-    (`INSERT INTO cart(user_id, product_id) Values(${cart.user_id}, ${cart.product_id})`);
+    (`INSERT INTO cart(user_id, product_id) Values(${cart.user}, ${cart.product})`);
 };
 
 CartQueries.getOne = async (id) => {
@@ -128,9 +136,14 @@ CartQueries.getAll = async () => {
     ('SELECT * FROM cart');
 };
 
+CartQueries.getAllByUser = async (id) => {
+  return await promisify(database.all.bind(database)) 
+    (`SELECT cart.id, products.name, products.img_src, products.price, category.name AS category FROM cart INNER JOIN products ON products.id=cart.product_id INNER JOIN category ON products.category_id=category.id WHERE cart.user_id=${id}`);
+};
+
 CartQueries.update = async (id, cart) => {
   return await promisify(database.run.bind(database))
-    (`UPDATE cart SET user_id=${cart.user_id}, product_id=${cart.product_id} WHERE id=${id}`);
+    (`UPDATE cart SET user_id=${cart.user}, product_id=${cart.product} WHERE id=${id}`);
 };
 
 CartQueries.delete = async (id) => {
@@ -139,9 +152,5 @@ CartQueries.delete = async (id) => {
 };
 
 module.exports = {
-  UserQueries,
-  ProductQueries,
-  StudentQueries,
-  CategoryQueries,
-  CartQueries,
+  init,
 };

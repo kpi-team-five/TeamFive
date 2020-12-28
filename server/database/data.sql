@@ -146,7 +146,16 @@ INSERT INTO category(id, name)
     Values(4, 'sweet');
 
 INSERT INTO cart(id, user_id, product_id)
-    Values(1, 'user1', '2');
+    Values(1, '1', '2');
 
 INSERT INTO cart(id, user_id, product_id)
-    Values(2, 'user2', '3');
+    Values(2, '1', '3');
+
+INSERT INTO cart(id, user_id, product_id)
+    Values(3, '1', '4');
+
+INSERT INTO cart(id, user_id, product_id)
+    Values(4, '2', '5');
+
+INSERT INTO cart(id, user_id, product_id)
+    Values(5, '2', '6');
