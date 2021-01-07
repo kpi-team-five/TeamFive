@@ -19,7 +19,7 @@ app.use(cors());
 const start = () => {
   database.connect(async () => {
     await database.init();
-    // await database.fill();
+    await database.fill();
     app.listen(port, () => {
       rest.start(app);
     });
