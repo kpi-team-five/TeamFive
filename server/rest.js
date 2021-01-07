@@ -7,6 +7,12 @@ let Queries = null;
 
 const start = app => {
   Queries = init();
+
+  /* root */
+
+  app.get('/', async (res) => {
+    res.redirect('https://kpi-team-five.github.io/TeamFive/app/index.html');
+  });
   
   /* auth */
   app.post('/auth', async (req, res) => {
